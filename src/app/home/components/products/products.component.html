@@ -1,0 +1,12 @@
+<div class="main-product-container">
+    @for (product of products; track $index) {
+        <div class="mx-5 p-3 product-card">
+            <div><img [src]="product.product_img + '.jpg'" alt="">
+            </div>
+            <div>
+                <h5><a href="#">{{ product.product_name }}</a></h5>
+                <p class="product-price">{{ product.price | currency }}</p>
+            </div>
+        </div>
+    } 
+</div>
